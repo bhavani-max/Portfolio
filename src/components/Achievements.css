@@ -1,0 +1,39 @@
+.ach__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.ach-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+  transition: box-shadow 0.3s;
+  cursor: default;
+}
+
+.ach-card:hover {
+  box-shadow: var(--glow);
+}
+
+.ach-card__icon {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.ach-card__text {
+  color: var(--text);
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .ach__grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .ach__grid { grid-template-columns: 1fr; }
+}
